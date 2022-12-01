@@ -10,3 +10,9 @@ def test_wrong_salary():
 def test_wrong_type_Employee():
     with pytest.raises(TypeError):
         employee_1 = Employee("1", "Семенов М.А.", "12.12.2000", 10000)
+
+# Проверяем увеличение оклада
+def test_increase_salary():
+    employee_1 = Employee(1, "Семенов М.А.", "12.12.2000", 10000)
+    employee_1.increase_salary(5000)
+    assert employee_1.salary == 15000
