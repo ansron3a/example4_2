@@ -1,6 +1,7 @@
 import pytest
 from module_employee import Employee, Department
 
+
 class Testing:
     # Проверка на отрицательный оклад
     def test_wrong_salary(self):
@@ -42,6 +43,7 @@ class Testing:
             count_before = len(dep1.employees)
             dep1.append(emp2)
             assert count_before == len(dep_1.employees) - 1
+
 
 if __name__ == "__main__":
     ex = Testing
