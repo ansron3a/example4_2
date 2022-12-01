@@ -16,3 +16,9 @@ def test_increase_salary():
     employee_1 = Employee(1, "Семенов М.А.", "12.12.2000", 10000)
     employee_1.increase_salary(5000)
     assert employee_1.salary == 15000
+
+# Сравниваем двух сотрудников по ДР
+def test_employees_lt():
+    employee_1 = Employee(1, "Семенов М.А.", "12.12.2000", 10000)
+    employee_2 = Employee(2, "Семенова М.М.", "12.12.1999", 10000)
+    assert (employee_1 < employee_2) == False
