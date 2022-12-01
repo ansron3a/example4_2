@@ -22,3 +22,12 @@ def test_employees_lt():
     employee_1 = Employee(1, "Семенов М.А.", "12.12.2000", 10000)
     employee_2 = Employee(2, "Семенова М.М.", "12.12.1999", 10000)
     assert (employee_1 < employee_2) == False
+
+# Проверка при добавлении сотрудника в отдел. (неверный тип)
+def test_wrong_type_Department():
+    with pytest.raises(TypeError):
+        emp1 = Employee(1, "Холодов А.А.", "12.12.2000", 10000)
+        emp1 = Employee(1, "Семенов А.А.", "12.12.2000", 10000)
+        emp2 = Employee(1, "Семенов К.Н.", "12.12.1999", 10000)
+        dep1 = Department("Закупки", emp1, emp2)
+        dep1.append("Петров А.Н.")
